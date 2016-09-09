@@ -29,10 +29,17 @@ public class Test {
 		Scanner in = new Scanner(new FileInputStream("res/file.txt"));
 		ArrayList<Byte> bf = new ArrayList<>();
 
-		while (in.hasNextInt()) {
-			int tempInt = in.nextInt();
-			byte tempByte = (byte) tempInt;
-			bf.add(tempByte);
+		// while (in.hasNextInt()) {
+		// int tempInt = in.nextInt();
+		// byte tempByte = (byte) tempInt;
+		// bf.add(tempByte);
+		// }
+
+		String temp = in.nextLine();
+		String[] tempStr = temp.split(" ");
+
+		for (int i = 0; i < tempStr.length; i++) {
+			bf.add((byte) Integer.parseInt(tempStr[i]));
 		}
 
 		String de = decrypMSG(bf);
@@ -57,9 +64,9 @@ public class Test {
 		byte[] decrypBF = new byte[encrypBF.size()];
 		for (int i = 0; i < encrypBF.size(); i++) {
 			decrypBF[i] = (byte) (encrypBF.get(i) ^ 240);
-//			System.out.print(String.format("%x, ", decrypBF[i]));
+			// System.out.print(String.format("%x, ", decrypBF[i]));
 		}
-//		System.out.println();
+		// System.out.println();
 		return new String(decrypBF, "UTF-8");
 	}
 

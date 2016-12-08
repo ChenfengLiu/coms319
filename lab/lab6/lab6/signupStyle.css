@@ -1,0 +1,45 @@
+.error {
+    color: #FF0000;
+}
+
+h2 {
+    padding-left: 50px;
+    color: white;
+    margin: 50px auto;
+}
+
+body {
+    width: auto;
+    height: 1000px;
+    margin: 0 auto;
+    background-image: url("res/beer-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+form {
+    width: 400px;
+    height: 450px;
+    text-align: left;
+    background-color: rgba(95, 92, 72, 0.5);
+    margin: 160px auto auto 130px;
+    padding-top: 50px;
+    padding-left: 50px;
+    border-radius: 5px;
+    color: white
+}
+
+input[type=submit] {
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-family: "Georgia";
+    font-size: 20px;
+    background: #885f0b;
+    border: none;
+    border-radius: 10px;
+    padding 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
